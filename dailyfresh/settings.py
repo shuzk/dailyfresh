@@ -95,6 +95,8 @@ DATABASES = {
     }
 }
 
+# django认证系统使用的模型类
+AUTH_USER_MODEL = 'user.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
