@@ -18,4 +18,9 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^user/', include('user.urls', namespace='user')),  # 用户
+    # url(r'^goods/', include('goods.urls')),
+    url(r'^cart/', include('cart.urls', namespace='cart')),  # 购物车
+    url(r'^order/', include('order.urls', namespace='order')),  # 订单
+    url(r'^', include('goods.urls', namespace='goods')),  # 商品，首页在goods中，放在最后
 ]
